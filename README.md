@@ -15,3 +15,5 @@ These are my projects as a camper of [FreeCodeCamp](https://www.freecodecamp.org
 - [Tribute Page](https://msforbes09.github.io/FCC-Project/TributePage/)
 
 View Responsive Web Design [Certification](https://www.freecodecamp.org/certification/msforbes09/responsive-web-design).
+
+### You can also view my [FreeCodeCamp Profile](https://www.freecodecamp.org/msforbes09) and copy of these projects in my [CodePen Profile](https://codepen.io/msforbes09/).
