@@ -2,6 +2,8 @@
 
 These are my projects as a camper of [FreeCodeCamp](https://www.freecodecamp.org).
 
+![certificate](https://github.com/msforbes09/FCC-Project/blob/master/image/responsiveWebDesignCertification.jpg?raw=true)
+
 ### Responsive Web Design Projects
 
 - [Personal Portfolio](https://msforbes09.github.io/FCC-Project/PersonalPortfolio/)
