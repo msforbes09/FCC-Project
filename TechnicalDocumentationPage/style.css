@@ -1,0 +1,93 @@
+@import 'https://fonts.googleapis.com/css?family=Maven Pro';
+@import 'https://fonts.googleapis.com/css?family=Anonymous Pro';
+
+body {
+  font-family: 'Maven Pro', century gothic;
+  font-size: 12px;
+}
+#navbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+  margin: 0;
+}
+#menu {
+  min-width: 320px;
+  height: 198px;
+  overflow-y: scroll;
+  overflow-x: auto;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8em;
+}
+.nav-link div {
+  border-top: 1px solid #aaa;
+  padding: 0.4em;
+  padding-left: 1em;
+}
+#navbar header {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.5em;_
+}
+#main-doc {
+  position: relative;
+  margin-top: 240px;
+}
+#main-doc header {
+  padding-top: 0.2em;
+  font-size: 1.5em;
+}
+#main-doc section {
+  font-size: 0.8em;
+}
+#main-doc p {
+  margin-left: 1em;
+  line-height: 1.5em;
+}
+#main-doc li {
+  line-height: 1.5em;
+}
+#main-doc code{
+  display: block;
+  white-space: pre;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.8em;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 1em;
+  line-height: 1.5em;
+  margin-left: 1em;
+  padding-left: 3em;
+}
+
+@media (min-width: 815px){
+  body {
+    font-size: 24px;
+  }
+  #navbar {
+    position: fixed;
+    width: 320px;
+    margin: 0;
+    height: 100%;
+    border-right: 3px solid #aaa;
+  }
+  #menu {
+    border: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  #main-doc {
+    margin: 0;
+    margin-left: 320px;
+    padding: 0 1em 0 1em;
+  }
+}

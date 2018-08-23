@@ -1,0 +1,105 @@
+body {
+  font-family: century gothic;
+  font-size: 10px;
+  background-color: #a9d7d1;
+}
+
+.container {
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: white;
+  }
+.row {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  padding: 0.3em;
+}
+
+.left,
+.right {
+  width: 50%;
+  margin: 0.5em;
+  padding: auto;
+}
+
+.left {
+  padding: 0.2em;
+  text-align: right;
+}
+#name,
+#email,
+#number{
+  height: 1.8em;
+  width: 90%;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 0.5em;
+}
+
+select{
+  height: 3em;
+  width: 40%;
+  border-radius:3px;
+  border: 1px solid gray;
+  padding: 0.5em;
+}
+
+textarea{
+  height: 4em;
+  width: 60%;
+  border-radius:3px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+#recommend,
+#checkboxes{
+  margin-top: 10px;
+  margin-left: -40px;
+}
+
+#submit {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  padding: 10px;
+  width: 150px;
+  background-color: #59ace0;
+  color: white;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+p{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.1em;
+}
+h1 {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+  body {
+    font-size: 16px;
+   }
+  #name,
+  #email,
+  #number{
+    height: 1.8em;
+    width: 60%;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding: 0.5em;
+  }
+}

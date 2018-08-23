@@ -1,0 +1,152 @@
+body{
+  font-size: 10px;
+  font-family: century gothic;
+  background-color: #eee;
+}
+#header-img {
+  width: 5em;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 0.9em;
+}
+#video {
+  width: 32em;
+  height: 18em;
+}
+#title {
+  font-size: 1.4em;
+}
+.feature-title {
+  font-size: 1.1em;
+}
+.feature-content {
+  font-size: 0.75em;
+  padding: 0.3em;
+}
+.icon {
+  color: orange;
+  position: absolute;
+  margin-left: -1.6em;
+  width: 1.5em;
+  text-align: center;
+}
+#features {
+  display: block;
+  margin: auto;
+}
+#title {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.feature {
+  display: block;
+  margin-left: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+#video {
+  display: block;
+  margin: auto;
+}
+#demo {
+  padding: 2em;
+}
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+.card {
+  border: 1px solid #888;
+  width: 10em;
+  height: 12em;
+}
+.card-title {
+  font-size: 0.9em;
+  text-align: center;
+  background-color: #ddd;
+  padding: 0.25em;
+}
+.card-content {
+  height: 10.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-content p {
+  font-size: 0.75em;
+  margin: 0;
+}
+.price {
+  font-weight: bold;
+}
+.select{
+  font-size: 0.9em;
+  background-color: #FFa;
+  border: 1px solid #aa9;
+  border-radius: 3px;
+  padding: 0.3em 1em 0.3em 1em;
+}
+#email,#submit {
+  font-size: 0.9em;
+  border: 1px solid #aa9;
+  border-radius: 5px;
+  padding: 0.4em 1em 0.3em 1em;
+  margin: 1em;
+}
+#submit {
+  background-color: #FFa;
+  font-weight: bold;
+}
+#form {
+  margin: 3em 0 3em 0;
+  display: flex;
+}
+#email {
+  flex-grow: 1;
+}
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid gray;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+}
+#nav-bar div {
+  margin: 0.5em 4em 0.5em 4em;
+  font-size: 0.8em;
+}
+.container {
+  margin-top: 2.6em;
+}
+
+ 
+@media (min-width: 1200px) {
+  body{
+    font-size: 20px;
+  }
+  #features,#pricing {
+    width: 60%;  
+  }
+  #input {
+    width: 40%;  
+    margin: auto;
+  }
+  .container {
+    top: 2.5em;
+  }
+}

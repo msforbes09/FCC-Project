@@ -1,0 +1,112 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<h1 id="title">Survey Form</h1>
+<div class="container">
+<p id="description">Survey to improve your experience in our site.</p>
+<form id="survey-form" action="#">
+  <div class="row">
+    <div class="left">
+      <label for="name" id="name-label">Name: </label>
+    </div>
+    <div class="right">  
+      <input type="text" id="name" placeholder="type your name here..." required/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <label for="email" id="email-label">E-mail: </label>  
+    </div>
+    <div class="right">
+      <input type="email" id="email" placeholder="type your E-mail here..."  required/>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <label for="number" id="number-label">Age: </label>  
+    </div>
+    <div class="right">
+      <input type="number" id="number" placeholder="age" min="1" max="125" required/>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <label for="dropdown">Which option best describes your current role? </label>  
+    </div>
+    <div class="right">
+      <select id="dropdown">
+        <option disabled value>Select an option</option>
+        <option value="Student">Student</option>
+        <option value="Full time job">Full time job</option>
+        <option value="Full time learner">Full time learner</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+        <option value="Other">Other</option>
+      </select>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <label for="recommend">How likely is that you would recommend<br />freeCodeCamp to a friend? </label>  
+    </div>
+    <div class="right">
+      <ul id="recommend">
+        <li><label><input type="radio" name="option" value="Definitely">Definitely</label></li>
+        <li><label><input type="radio" name="option" value="Maybe">Maybe</label></li>
+        <li><label><input type="radio" name="option" value="Not Sure">Not Sure</label></li>
+      </ul>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="left">
+      <label for="subjects">What do you like most in FCC:</label>  
+    </div>
+    <div class="right">
+      <select id="subjects">
+        <option disabled value>Select an option</option>
+        <option value="Challenges">Challenges</option>
+        <option value="Projects">Projects</option>
+        <option value="Community">Community</option>
+        <option value="Open Source">Open Source</option>
+        <option value="Other">Other</option>
+      </select>   
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <label for="checkboxes">Things that should be improved in the future<br/>(Check all that apply):</label>
+    </div>
+    <div class="right">
+      <ul id="checkboxes">
+        <li><input type="checkbox" value="Front-end Projects" />Front-end Projects</li>
+        <li><input type="checkbox" value="Back-end Projects" />Back-end Projects</li>
+        <li><input type="checkbox" value="Data Visualization" />Data Visualization</li>
+        <li><input type="checkbox" value="Challenges" />Challenges</li>
+        <li><input type="checkbox" value="Open Source Community" />Open Source Community</li>
+        <li><input type="checkbox" value="Gitter help rooms" />Gitter help rooms</li>
+        <li><input type="checkbox" value="Videos" />Videos</li>
+        <li><input type="checkbox" value="City Meetups" />City Meetups</li>
+        <li><input type="checkbox" value="Wiki" />Wiki</li>
+        <li><input type="checkbox" value="Forum" />Forum</li>
+        <li><input type="checkbox" value="Additional Courses" />Additional Courses</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="left">
+      <label for="comment">Any Comments or Suggestions?</label>
+    </div>
+    <div class="right">
+      <textarea id="comment"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" id="submit" value="Submit" />
+  </div>
+</form>
+</div>
+</body>
+</html>
