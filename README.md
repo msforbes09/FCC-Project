@@ -18,6 +18,8 @@ View Responsive Web Design [Certification](https://www.freecodecamp.org/certific
 
 ### JavaScript Algorithms and Data Structures Projects
 
+- [Compiled Projects](https://msforbes09.github.io/FCC-Project/JavaScriptAlgorithmsAndDataStructures/)
+
 View JavaScript Algorithms and Data Structures [Certification](https://www.freecodecamp.org/certification/msforbes09/javascript-algorithms-and-data-structures).
 
 ### You can also view my [FreeCodeCamp Profile](https://www.freecodecamp.org/msforbes09) and copy of these projects in my [CodePen Profile](https://codepen.io/msforbes09/).
