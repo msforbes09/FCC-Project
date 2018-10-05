@@ -18,4 +18,8 @@ These are my projects as a camper of [FreeCodeCamp](https://www.freecodecamp.org
 
 View Responsive Web Design [Certification](https://www.freecodecamp.org/certification/msforbes09/responsive-web-design).
 
+![certificate](https://github.com/msforbes09/FCC-Project/blob/master/image/responsiveWebDesignCertification.jpg?raw=true)
+
+### JavaScript Algorithms and Data Structures Projects
+
 ### You can also view my [FreeCodeCamp Profile](https://www.freecodecamp.org/msforbes09) and copy of these projects in my [CodePen Profile](https://codepen.io/msforbes09/).
