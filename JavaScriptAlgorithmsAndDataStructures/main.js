@@ -61,11 +61,40 @@ function assessDigit(digit,option){
    }
    return roman;
  }
+//solution #3
+//sample: rot13("SERR PBQR PNZC");
+function rot13(str) {
+  str = str.toUpperCase().split("");
+  const decoded = str.map(letter => {
+    let code = letter.charCodeAt(0);
+    if(code >= 65 && code <= 90 ){
+        code += 13;
+    }
+    if(code > 90){
+        code -= 26;
+    }
+    return String.fromCharCode(code);
+  })
+  return decoded.join('');
+}
+//solution #4
+//sample: telephoneCheck("1 (555) 555-5555");
+function telephoneCheck(str) {
+  const validator1 = /^[1]{0,1}[\s]{0,1}\d{3}[-\s]{0,1}\d{3}[-\s]{0,1}\d{4}$/;
+  const validator2 = /^[1]{0,1}[\s]{0,1}[(]{1}\d{3}[)]{1}[\s]{0,1}\d{3}[-\s]{0,1}\d{4}$/;
+  return validator1.test(str) || validator2.test(str);
+}
+
+
 
 const palindromeInput = document.querySelector('#palindrome-input');
 const palindromeOutput = document.querySelector('#palindrome-output');
 const converterInput = document.querySelector('#converter-input');
 const converterOutput = document.querySelector('#converter-output');
+const decoderInput = document.querySelector('#decoder-input');
+const decoderOutput = document.querySelector('#decoder-output');
+const validatorInput = document.querySelector('#validator-input');
+const validatorOutput = document.querySelector('#validator-output');
 
 function palindromeCheck(){
 	let answer;
@@ -73,5 +102,23 @@ function palindromeCheck(){
 	palindromeOutput.firstElementChild.textContent = answer;
 }
 
+function romanNumeralConvertion(){
+	const regex = /\D/;
+	const answer = regex.test(this.value) ? "Invalid" : convertToRoman(this.value);
+	converterOutput.firstElementChild.textContent = answer;
+}
+
+function decoder(){
+	const answer = rot13(this.value);
+	decoderOutput.firstElementChild.textContent = answer;
+}
+
+function validator(){
+	const answer = telephoneCheck(this.value) ? "a" : "not";
+	validatorOutput.firstElementChild.textContent = answer;
+}
+
 palindromeInput.addEventListener('keyup', palindromeCheck);
-convertInput.addEventListener('keyup', romanNumeralConvertion);
+converterInput.addEventListener('keyup', romanNumeralConvertion);
+decoderInput.addEventListener('keyup', decoder);
+validatorInput.addEventListener('keyup', validator);
