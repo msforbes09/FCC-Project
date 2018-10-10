@@ -25,12 +25,15 @@ body{
 	/*border: 1px solid red;*/
 	width: 800px;
 	display: block;
-	margin: auto;
+	margin: 0 auto 0 auto;
+	border-left: 3px solid #ffff99;
+	border-right: 3px solid #ffff99;
+	background-color: #995533;
 }
 .project{
 	border: 1px solid black;
 	border-radius: 10px;
-	width: 100%;
+	width: auto;
 	min-height: 100px;
 	background-color: white;
 	margin: 20px;
