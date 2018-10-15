@@ -84,6 +84,62 @@ function telephoneCheck(str) {
   const validator2 = /^[1]{0,1}[\s]{0,1}[(]{1}\d{3}[)]{1}[\s]{0,1}\d{3}[-\s]{0,1}\d{4}$/;
   return validator1.test(str) || validator2.test(str);
 }
+// solution #5
+// sample checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
+const moneyValue = [
+  {name: "ONE HUNDRED", value: 100},
+  {name: "TWENTY", value: 20},
+  {name: "TEN", value: 10},
+  {name: "FIVE", value: 5},
+  {name: "ONE", value: 1},
+  {name: "QUARTER", value: 0.25},
+  {name: "DIME", value: 0.1},
+  {name: "NICKEL", value: 0.05},
+  {name: "PENNY", value: 0.01}
+]
+function checkCashRegister(price, cash, cid) {
+  const response = {status: null, change: []};
+  let changeValue = cash - price;
+  const register = cid.reduce((acc, curr) => {
+    acc[curr[0]] = curr[1];
+    acc.total += curr[1];
+     acc.total = Math.round(acc.total * 100) / 100;
+    return acc
+  }, {total: 0})
+  if(register.total < changeValue){
+    console.log("insufiicient")
+    response.status = "INSUFFICIENT_FUNDS";
+     return response;
+  } else if (register.total === changeValue) {
+    console.log("exact")
+    response.status = "CLOSED";
+    response.change = cid;
+    return response;
+  }
+  const change = moneyValue.reduce((acc, curr) => {
+    let value = 0;
+    while(register[curr.name] > 0 && changeValue >= curr.value){
+      console.log(changeValue, acc, curr.name)
+      register[curr.name] -= curr.value;
+      changeValue -= curr.value;
+      value += curr.value
+      changeValue = Math.round(changeValue * 100) / 100;
+    }
+    if (value > 0) {
+      acc.push([curr.name, value])
+    };
+    return acc; 
+  },[])
+
+  if(changeValue > 0 ){
+    response.status = "INSUFFICIENT_FUNDS";
+    return response;
+  }
+  response.status = "OPEN";
+  response.change = change;
+  return response;
+}
+
 
 
 

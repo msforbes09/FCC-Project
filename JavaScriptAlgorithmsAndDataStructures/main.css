@@ -2,10 +2,10 @@
 
 *{
 	box-sizing: border-box;
-}
-body{
 	padding: 0;
 	margin: 0;
+}
+body{
 	font-family: Montserrat;
 	font-size: 20px;
 }
@@ -19,28 +19,30 @@ body{
 	width: 100%;
 	height: 100vh;
 	filter: blur(2px);
-	z-index: -1;	
 }
 .main{
-	/*border: 1px solid red;*/
-	width: 800px;
+	border: 1px solid white;
+	border-left: 2px solid #a5a5a5;
+	border-right: 2px solid #a5a5a5;
+	position: relative;
 	display: block;
-	margin: 0 auto 0 auto;
-	border-left: 3px solid #ffff99;
-	border-right: 3px solid #ffff99;
-	background-color: #995533;
+	width: 800px;
+	margin: auto;
+	background-color: #ffffff;
+	/*padding: 10px 20px 10px 20px;*/
 }
 .project{
-	border: 1px solid black;
+	border: 1px solid #f5f5f5;
 	border-radius: 10px;
 	width: auto;
-	min-height: 100px;
-	background-color: white;
-	margin: 20px;
+	background-color: #f5f5f5;
+	box-shadow: inset 0 0 10px #a5a5a5;
+	margin: 10px 20px 10px 20px;
+	position: relative;
 }
 .project-title{
 	font-size: 1.5em;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #a5a5a5;
 	padding: 15px;
 }
 .project-content{
@@ -84,4 +86,45 @@ input[type="text"]:focus{
 	max-width: 90%;
 	word-wrap: break-word;
 	margin: auto;
+}
+#cash-register{
+	display: flex;
+}
+#cash-register hr{
+	border-top: 1px solid #a5a5a5;
+	margin: 5px 0 5px 0;
+}
+.cash-register-inputGroup,
+.cash-register-outputGroup{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.cash-register-inputGroup{
+	border-right: 1px solid #a5a5a5;
+	padding: 10px 5px 15px 5px;
+}
+.cash-register-input{
+	display: flex;
+	padding: 5px;
+}	
+.cash-register-input input{
+	display: block;
+	font-size: 0.8em;
+	line-height: 2em;
+	border-radius: 3px;
+	max-width: 50%;
+	padding: 0 10px 0 10px;
+	flex: 1;
+}
+.cash-register-input label{
+	font-size: 0.8em;
+	max-width: 50%;
+	flex: 1;
+	margin: auto;
+	text-align: right;
+	padding-right: 20px; 
+}
+.cash-denomination{
+	border-top: 1px solid #a9a9a9;
 }
