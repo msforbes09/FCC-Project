@@ -107,11 +107,9 @@ function checkCashRegister(price, cash, cid) {
     return acc
   }, {total: 0})
   if(register.total < changeValue){
-    console.log("insufiicient")
     response.status = "INSUFFICIENT_FUNDS";
      return response;
   } else if (register.total === changeValue) {
-    console.log("exact")
     response.status = "CLOSED";
     response.change = cid;
     return response;
@@ -152,6 +150,8 @@ const decoderOutput = document.querySelector('#decoder-output');
 const validatorInput = document.querySelector('#validator-input');
 const validatorOutput = document.querySelector('#validator-output');
 
+const extractChange = document.querySelector('#extract-change');
+
 function palindromeCheck(){
 	let answer;
 	palindrome(this.value) ? answer = "" : answer = "not";
@@ -174,7 +174,57 @@ function validator(){
 	validatorOutput.firstElementChild.textContent = answer;
 }
 
+function calculateChange(e){
+  
+  const priceInput = document.querySelector('#price-input');
+  const cashInput = document.querySelector('#cash-input');
+  const pennyInput = document.querySelector('#penny-input');
+  const nickelInput = document.querySelector('#nickel-input');
+  const dimeInput = document.querySelector('#dime-input');
+  const quarterInput = document.querySelector('#quarter-input');
+  const oneInput = document.querySelector('#one-input');
+  const fiveInput = document.querySelector('#five-input');
+  const tenInput = document.querySelector('#ten-input');
+  const twentyInput = document.querySelector('#twenty-input');
+  const hundredInput = document.querySelector('#hundred-input');
+  const registerResponseOutput = document.querySelector('#register-response');
+  const change = document.querySelector('#change');
+  
+  const price = isNaN(parseFloat(priceInput.value)) ? 0 : parseFloat(priceInput.value);
+  const cash = isNaN(parseFloat(cashInput.value)) ? 0 : parseFloat(cashInput.value);
+  const penny = isNaN(parseFloat(pennyInput.value)) ? 0 : parseFloat(pennyInput.value);
+  const nickel = isNaN(parseFloat(nickelInput.value)) ? 0 : parseFloat(nickelInput.value);
+  const dime = isNaN(parseFloat(dimeInput.value)) ? 0 : parseFloat(dimeInput.value);
+  const quarter = isNaN(parseFloat(quarterInput.value)) ? 0 : parseFloat(quarterInput.value);
+  const one = isNaN(parseFloat(oneInput.value)) ? 0 : parseFloat(oneInput.value);
+  const five = isNaN(parseFloat(fiveInput.value)) ? 0 : parseFloat(fiveInput.value);
+  const ten = isNaN(parseFloat(tenInput.value)) ? 0 : parseFloat(tenInput.value);
+  const twenty = isNaN(parseFloat(twentyInput.value)) ? 0 : parseFloat(twentyInput.value);
+  const hundred = isNaN(parseFloat(hundredInput.value)) ? 0 : parseFloat(hundredInput.value);
+
+  const cid = [
+    ["PENNY", penny],
+    ["NICKEL", nickel],
+    ["DIME", dime],
+    ["QUARTER", quarter],
+    ["ONE", one],
+    ["FIVE", five],
+    ["TEN", ten],
+    ["TWENTY", twenty],
+    ["ONE HUNDRED", hundred]
+  ]
+
+  const registerResponse = checkCashRegister(price, cash, cid);
+  const extractedChange = registerResponse.change.map(list => {
+    return `<div class="change-list">${list[0]} : <span>${list[1]}</span></div>`;
+  }).join('');
+
+  registerResponseOutput.firstElementChild.textContent = registerResponse.status;
+  change.innerHTML = extractedChange;
+} 
+
 palindromeInput.addEventListener('keyup', palindromeCheck);
 converterInput.addEventListener('keyup', romanNumeralConvertion);
 decoderInput.addEventListener('keyup', decoder);
 validatorInput.addEventListener('keyup', validator);
+extractChange.addEventListener('click', calculateChange);

@@ -47,45 +47,52 @@
 						<label for="cash-input">Cash :</label>
 						<input type="text" id="cash-input" placeholder="cash (ex: 100)">
 					</div>
-					<hr>
-					<div class="cash-register-input">
-						<label for="penny-input">Penny :</label>
-						<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
+					<div class="cash-denomination">
+						<div class="cash-register-input">
+							<label for="penny-input">Penny :</label>
+							<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
+						</div>
+						<div class="cash-register-input">
+							<label for="nickel-input">Nickel :</label>
+							<input type="text" id="nickel-input" placeholder="nickel (ex: 2.05)">
+						</div>
+						<div class="cash-register-input">
+							<label for="dime-input">Dime :</label>
+							<input type="text" id="dime-input" placeholder="dime (ex: 3.10)">
+						</div>
+						<div class="cash-register-input">
+							<label for="quarter-input">Quarter :</label>
+							<input type="text" id="quarter-input" placeholder="quarter (ex: 4.25)">
+						</div>
+						<div class="cash-register-input">
+							<label for="one-input">One :</label>
+							<input type="text" id="one-input" placeholder="one (ex: 90)">
+						</div>
+						<div class="cash-register-input">
+							<label for="five-input">Five :</label>
+							<input type="text" id="five-input" placeholder="five (ex: 55)">
+						</div>
+						<div class="cash-register-input">
+							<label for="ten-input">Ten :</label>
+							<input type="text" id="ten-input" placeholder="ten (ex: 20)">
+						</div>
+						<div class="cash-register-input">
+							<label for="twenty-input">Twenty :</label>
+							<input type="text" id="twenty-input" placeholder="twenty (ex: 60)">
+						</div>
+						<div class="cash-register-input">
+							<label for="hundred-input">Hundred :</label>
+							<input type="text" id="hundred-input" placeholder="hundred (ex: 100)">
+						</div>
 					</div>
 					<div class="cash-register-input">
-						<label for="nickel-input">Nickel :</label>
-						<input type="text" id="nickel-input" placeholder="nickel (ex: 2.05)">
-					</div>
-					<div class="cash-register-input">
-						<label for="dime-input">Dime :</label>
-						<input type="text" id="dime-input" placeholder="dime (ex: 3.10)">
-					</div>
-					<div class="cash-register-input">
-						<label for="quarter-input">Quarter :</label>
-						<input type="text" id="quarter-input" placeholder="quarter (ex: 4.25)">
-					</div>
-					<div class="cash-register-input">
-						<label for="penny-input">Penny :</label>
-						<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
-					</div>
-					<div class="cash-register-input">
-						<label for="penny-input">Penny :</label>
-						<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
-					</div>
-					<div class="cash-register-input">
-						<label for="penny-input">Penny :</label>
-						<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
-					</div>
-					<div class="cash-register-input">
-						<label for="penny-input">Penny :</label>
-						<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
-					</div>
-					<div class="cash-register-input">
-						<label for="penny-input">Penny :</label>
-						<input type="text" id="penny-input" placeholder="penny (ex: 1.01)">
+						<input type="button" id="extract-change" value="Calculate">
 					</div>
 				</div>
-				<div class="cash-register-outputGroup"></div>
+				<div class="cash-register-outputGroup">
+					<div id="register-response">Register : <span></span></div>
+					<div id="change"></div>
+				</div>
 			</div>
 		</div>
 	</div>
